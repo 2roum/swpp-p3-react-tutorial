@@ -1,4 +1,5 @@
-import { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
+import { NavLink } from "react-router-dom";
 import Todo from "../../components/Todo/Todo";
 import TodoDetail from "../../components/TodoDetail/TodoDetail";
 import "./TodoList.css";
@@ -47,6 +48,7 @@ export default function TodoList(props: IProps) {
           );
         })}
         {todoDetail}
+        <NavLink to="/new-todo" >New Todo</NavLink>
       </div>
     </div>
   );
